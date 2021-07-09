@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   
+    <title></title>
+    <style type="text/css" media="all">
+      body{
+        background: linear-gradient(to left, #7883f0,#06bdf5);
+        padding: 0;
+       box-sizing: border-box;
+        text-align: center;
+      
+      }
+     
+      .main{
+      
+        text-align: center;
+        margin: 20% auto 5% auto;
+        animation-name: main;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        width: 55%;
+        font-size: 0px;
+        border-radius: 15px;
+        transform: scale(1);
+        transition-timing-function: ease-in;
+      }
+      #result{
+        text-align: right;
+        width: 94.7%;
+        height: 40px;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 0 5px;
+        letter-spacing: 1px;
+        animation-name: result;
+        animation-iteration-count: infinite;
+        animation-duration: 10s;
+        background: white;
+        border: none;
+       outline: none;
+       border-radius: 15px 15px 0 0;
+      
+      }
+      @keyframes result{
+        0%{
+          background: linear-gradient(red,yellow,red);
+        }
+        20%{
+          background: linear-gradient(violet,maroon,violet) ;
+        }
+        40%{
+          background: linear-gradient(mediumseagreen,yellow,mediumseagreen) ;
+        }
+        80%{
+          background: linear-gradient(orangered,orange,orangered);
+        }
+        100%{
+          background:linear-gradient(aqua,blue,aqua);
+        }
+      
+      }
+      .cal-body input{
+        width: 25%;
+        height: 40px;
+        border: none;
+        font-size: 18px;
+        background: #1f2326;
+        color: white;
+        cursor: pointer;
+        border: 0.5px solid black;
+        
+    }
+     .cal-body input:hover{
+      background: red;
+      
+      
+    }
+     .cal-body{
+       margin: .7px auto;
+       width: 100%;
+       
+      
+     }
+     input.orange{
+       background: orangered;
+       transition: .5s;
+     -webkit-border-bottom-right-radius: 15px;
+       outline: none;
+     }
+     input.orange:hover{
+       background: orange;
+     }
+     
+     input.btn {
+       background: mediumseagreen;
+       
+     }
+     input.btn:hover{
+       background: lightgreen;
+     }
+     input.dot{
+     -webkit-border-bottom-left-radius: 15px;
+     outline: none;
+     }
+     @keyframes main{
+       0%{
+         margin-top:-500px ;
+         transform: rotate(0deg);
+       }
+       33.3%{
+         margin-top: 50%;
+         transform: rotate(0deg); 
+       }
+       66.6%{
+         transform: rotate(360deg);
+         margin-top: 37%;
+        
+       }
+      
+       100%{
+          margin-top: 50%;
+        
+         box-shadow:  -3px -3px 5px 1px black, -3px -3px 5px 1px black;
+       }
+     }
+     span{
+      font-weight: bold;
+      font-size: 24px;
+      animation-name: span;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+      color: black;
+      }
+      @keyframes span{
+        0%{
+          opacity: 0;
+          color: white;
+          margin-top:-300px ;
+        }
+        50%{
+          
+          opacity: .5;
+          color: aqua;
+        }
+        100%{
+          opacity: 1;
+          color: black;
+        }
+      }
+    
+    </style>
+  </head>
+  <body>
+  
+   <span> SHAFIN</span>
+  
+   
+    <div class="main">
+      <div class="cal-head">
+        <input type="text" id="result" maxlength="10" />
+      </div>
+      <div class="cal-body">
+        
+        <div>
+          <input type="button" value="C" />
+          <input type="button" value="+/-" />
+          <input type="button" value="%" />
+          <input type="button" value="/" class="btn" />
+        </div>
+        
+         <div>
+          <input type="button" value="7" />
+          <input type="button" value="8" />
+          <input type="button" value="9" />
+          <input type="button" value="x" class="btn" />
+        </div>
+        
+         <div>
+          <input type="button" value="4" />
+          <input type="button" value="5" />
+          <input type="button" value="6" />
+          <input type="button" value="+" class="btn" />
+        </div>
+        
+         <div>
+          <input type="button" value="1" />
+          <input type="button" value="2" />
+          <input type="button" value="3" />
+          <input type="button" value="-" class="btn" />
+        </div>
+        
+         <div>
+          <input type="button" value="." class="dot"/>
+          <input type="button" value="0" />
+          <input type="button" value="DEL" />
+          <input type="button" value="=" class="orange" />
+        </div>
+        
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
